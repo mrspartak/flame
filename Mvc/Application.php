@@ -14,5 +14,8 @@ class Application
 	{
 		$dispatcher = \Flame\Di::getInstance()->dispatcher;
 		$dispatcher->dispatch();
+
+		$view = \Flame\Di::getInstance()->view;
+		return $view->getRendered();
 	}
 }
